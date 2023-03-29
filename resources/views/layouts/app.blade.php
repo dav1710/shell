@@ -17,9 +17,9 @@
 
 <body>
     <header id="header" class="fixed-top d-flex align-items-center header-scrolled">
-        <div class="container d-flex align-items-center">
+        <div class="container container_header d-flex align-items-center justify-content-around">
 
-          <div class="d-flex logo">
+          <div class="d-flex logo col-3">
                 <img src="{{ asset('img/logo.png') }}" alt="logo">
            <div class="f-flex logo_title">
                 <h1>Shell Licensee</h1>
@@ -27,25 +27,21 @@
            </div>
           </div>
 
-          <nav id="navbar" class="navbar order-last order-lg-0">
+          <nav id="navbar" class="navbar col-6">
             <ul>
-              <li><a class="nav-link scrollto" href="#hero">Home</a></li>
+              <li><a class="nav-link scrollto active" href="#home">Home</a></li>
+              <li><a class="nav-link scrollto" href="#shop">Our Shop</a></li>
               <li><a class="nav-link scrollto" href="#about">About</a></li>
-              <li><a class="nav-link scrollto" href="#services">Services</a></li>
-              <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
-              <li><a class="nav-link scrollto" href="#testimonials">Testimonials</a></li>
-              <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+              <li><a class="nav-link scrollto" href="#contact_us">Contact Us</a></li>
             </ul>
             <i class="bi mobile-nav-toggle bi-list"></i>
-          </nav><!-- .navbar -->
-
-          <div class="header-social-links d-flex align-items-center">
-            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </nav>
+          <div class="search col-3">
+            <div class="container_search">
+                <input type="text" maxlength= "12"  placeholder="Search" class="searchbar">
+            <img src="{{ asset('img/search.png') }}" alt="Magnifying Glass" class="button">
+            </div>
           </div>
-
         </div>
       </header>
     @yield('content')

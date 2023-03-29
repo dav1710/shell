@@ -1,3 +1,10 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
 body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
@@ -21,7 +28,9 @@ body {
   h6 {
     font-family: "Raleway", sans-serif;
   }
-
+  .container_header{
+    max-width: 85% !important;
+  }
   /*--------------------------------------------------------------
   # Back to top button
   --------------------------------------------------------------*/
@@ -144,6 +153,11 @@ body {
 
   .navbar li {
     position: relative;
+    display: flex;
+    text-align: center;
+    margin-right: 15%;
+    align-items: center;
+    height: 100px;
   }
 
   .navbar a,
@@ -151,30 +165,75 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 0 10px 30px;
+    height: inherit;
     font-family: "Poppins", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    color: #4f5a62;
+    font-size: 20px;
+    font-weight: 350;
+    color: #1E1E1E;
     white-space: nowrap;
-    transition: 0.3s;
+    transition: 0.1s;
   }
 
-  .navbar a i,
-  .navbar a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
+
+  .navbar .active {
+    color: #1E1E1E;
+    border-bottom: 3px solid #DB2D1B;
   }
 
   .navbar a:hover,
-  .navbar .active,
-  .navbar .active:focus,
-  .navbar li:hover>a {
-    color: #3498db;
+  .navbar li:hover>a{
+    transform: scale(1.1);
+    color: #1E1E1E;
+  }
+  .searchbar {
+    font-size: 2.4rem;
+    width: 18rem;
+    height: 66px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgba(170, 170, 170, 0.25);
+    background-color: #FBFBFB;
+    padding: 2rem;
+    position: relative;
+    transition: all .2s;
+    transition-delay: .1s;
   }
 
 
+
+  .button {
+    position: absolute;
+    top: 0.7rem;
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(119, 119, 119, 0.25);
+    right: 9rem;
+    transition: all .2s;
+    transition-delay: .1s;
+    background-color: #FBFBFB;
+    padding: 9px;
+  }
+
+  .button:hover {
+    cursor: pointer;
+  }
+
+
+  .container_search {
+    width: 25rem;
+    height: 100%;
+    margin: 0 1rem;
+    position: relative;
+  }
+
+  .searchbar::placeholder {
+    position: absolute;
+    bottom: 1.4rem;
+    font-size: 20px;
+    font-weight: lighter;
+    line-height: 100%;
+    text-align: left;
+  }
   /**
   * Mobile Navigation
   */
