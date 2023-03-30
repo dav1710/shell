@@ -310,3 +310,93 @@ body {
   }
 
 
+.slider_section
+{
+    position: relative;
+    margin-top: 100px;
+    width: 100%;
+}
+.home_slider_inner{
+    height: 556px;
+}
+.slider_li {
+    border-radius: 50% !important;
+    opacity: 1 !important;
+    color: transparent;
+    background-color: transparent !important;
+    background-clip: border-box !important;
+    border: 2px solid #fff !important;
+    width: 15px !important;
+    height: 15px !important;
+    margin-right: 12px !important;
+}
+.carousel-indicators .active{
+    background-color: #FFFFFF !important;
+}
+.home_carousel_item img{
+    height: 556px;
+    object-fit: cover;
+}
+
+.our_services_card img {
+    width: 200px;
+    height: 200px;
+    object-fit: fill;
+    border-radius: 50%;
+    border: 2px solid #FDC702;
+}
+
+.services_title{
+    text-align: center;
+}
+.our_services_card p{
+    font-size: 13px;
+    font-weight: 300;
+    width: 200px;
+    margin-top: 23px;
+    text-align: center;
+}
+.our_services_card{
+    width: auto !important;
+}
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .card img {
+    padding: 20px;
+  }
+  .card {
+    margin: 0 0.5em;
+    width: 25%;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+    border-radius: 0;
+  }
+  .our_shop_slider .carousel-inner {
+    padding: 1em;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    background-color: #e1e1e1 !important;
+    width: 5vh !important;
+    height: 5vh;
+    border-radius: 50%;
+    top: 50% !important;
+    transform: translateY(-50%);
+  }
+.card-body{
+    margin-left: 10px;
+}
+.card-body p{
+    font-size: 16px;
+    color: #A92117;
+}
+.card-body h5{
+    font-size: 16px;
+    color: #1E1E1E;
+}
+.carousel-control-prev-icon{
+    background-image: url('./../img/next.png') !important;
+    transform: rotate(180deg);
+}
