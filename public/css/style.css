@@ -400,3 +400,12 @@ body {
     background-image: url('./../img/next.png') !important;
     transform: rotate(180deg);
 }
+.carousel-control-next-icon{
+    background-image: url('./../img/next.png') !important;
+}
+.our_shop_slider .carousel-control-prev, .carousel-control-next{
+    width: 56px !important;
+    height: 56px;
+    background-color: #FDC702 !important;
+    opacity: 1 !important;
+}
