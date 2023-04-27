@@ -35,7 +35,9 @@ class ProductController extends Controller
 
         if ($request->hasFile('img')) {
             $filename = $request->file('img')->hashName();
-            Image::make($request->file('img'))->resize(1920, 720)->save(public_path('storage/uploads/product/' . $filename));
+            Image::make($request->file('img'))->resize(null, 240, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save(public_path('storage/uploads/product/' . $filename));
             $data['img'] = $filename;
         }
 
@@ -72,7 +74,9 @@ class ProductController extends Controller
             }
 
             $filename = $request->file('img')->hashName();
-            Image::make($request->file('img'))->resize(1920, 720)->save(public_path('storage/uploads/product/' . $filename));
+            Image::make($request->file('img'))->resize(null, 240, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save(public_path('storage/uploads/product/' . $filename));
             $data['img'] = $filename;
         }
         else if ($request->delete_image) {

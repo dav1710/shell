@@ -8,6 +8,8 @@
     {{-- <link rel="shortcut icon" href="{{ asset('img/ombuds_logo.png') }}" type="image/x-icon"> --}}
     <link href="{{ asset('css/style.css?v=' . date('YmdHis')) }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
     <link rel="stylesheet" href="{{ asset('leaflet/leaflet.css') }}" crossorigin="" />
 
     @yield('styles')
@@ -49,6 +51,7 @@
     <script src="{{ asset('js/jquery.js') }}"></script>
     <script src="{{ asset('js/popper.min.js') }}" crossorigin="anonymous"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}" crossorigin="anonymous"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}" crossorigin="anonymous"></script>
     <script src="{{ asset('leaflet/leaflet.js') }}" crossorigin=""></script>
     <script src="{{ asset('js/main.js') }}"></script>
 

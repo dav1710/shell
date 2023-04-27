@@ -23,7 +23,7 @@
     </div>
   </div>
 </section>
-<section class="our_services_section mt-4">
+<section class="our_services_section mt-4" id="services">
     <div class="container">
         <h2 class="services_title">Our Services</h2>
         <div class="our_services d-flex justify-content-around">
@@ -46,114 +46,70 @@
         </div>
     </div>
 </section>
-<section>
+
+<section id="our_shop">
     <div class="container our_shop">
-        <div id="carouselExampleControls" class="carousel slide our_shop_slider" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="cards-wrapper">
-                    <div class="card">
-                      <img src="{{ asset('img/card_bg.png') }}" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="price">900 AMD</p>
-                      </div>
+        <h2 class="shop_title">Our Shop</h2>
+        <div class="row">
+            <div class="owl-carousel product-carousel owl-theme">
+                @foreach ($product as $item)
+                    <div class="item">
+                        <div class="card">
+                            <img src="{{ asset('storage/uploads/product/'.$item->img) }}" alt="{{ $item->img }}" class="product_image">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $item->title_am }}</h5>
+                                <p class="price">{{ $item->price }} AMD</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card">
-                      <img src="{{ asset('img/card_bg.png') }}" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="price">900 AMD</p>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <img src="{{ asset('img/card_bg.png') }}" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="price">900 AMD</p>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <img src="{{ asset('img/card_bg.png') }}" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="price">900 AMD</p>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-              <div class="carousel-item">
-                 <div class="cards-wrapper">
-                    <div class="card">
-                      <img src="{{ asset('img/card_bg.png') }}" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="price">900 AMD</p>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <img src="{{ asset('img/card_bg.png') }}" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="price">900 AMD</p>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <img src="{{ asset('img/card_bg.png') }}" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="price">900 AMD</p>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <img src="{{ asset('img/card_bg.png') }}" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="price">900 AMD</p>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-              <div class="carousel-item">
-                 <div class="cards-wrapper">
-                    <div class="card">
-                      <img src="{{ asset('img/card_bg.png') }}" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="price">900 AMD</p>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <img src="{{ asset('img/card_bg.png') }}" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="price">900 AMD</p>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <img src="{{ asset('img/card_bg.png') }}" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="price">900 AMD</p>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <img src="{{ asset('img/card_bg.png') }}" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="price">900 AMD</p>
-                      </div>
-                    </div>
-                  </div>
-              </div>
+                @endforeach
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </a>
-          </div>
+        </div>
     </div>
 </section>
-  @endsection
+
+<section id="about">
+    <div class="container about">
+        <h2 class="about_title">About</h2>
+        <div class="row d-flex">
+            <div class="about_img">
+                <img src="{{ asset('img/about.png') }}" alt="about">
+            </div>
+            <div class="about_text">
+                <div class="about_text_title">
+                    <p>Oil and Gas Company About</p>
+                </div>
+                <div class="about_text_subtitle">
+                    <p>Subtitle Here</p>
+                </div>
+                <div class="about_text_description">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@endsection
+@section('scripts')
+<script>
+    $('.product-carousel').owlCarousel({
+        loop:false,
+        margin:10,
+        nav:true,
+        dots:false,
+        rewind: true,
+        navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+        }
+    })
+</script>
+@endsection
