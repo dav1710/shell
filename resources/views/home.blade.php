@@ -89,6 +89,26 @@
         </div>
     </div>
 </section>
+
+<section class="contact mt-4" id="contact">
+    <div class="container">
+        <h2 class="contact_title">Contact Us</h2>
+        <div class="our_services d-flex justify-content-around">
+            <div class="our_contact_card d-flex flex-column col-3">
+                <img src="{{ asset('img/location.png') }}" alt="location">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+            </div>
+            <div class="our_contact_card d-flex flex-column col-3">
+                <img src="{{ asset('img/phone.png') }}" alt="phone">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+            </div>
+            <div class="our_contact_card d-flex flex-column col-3">
+                <img src="{{ asset('img/mail.png') }}" alt="mail">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+            </div>
+        </div>
+    </div>
+</section>
 @endsection
 @section('scripts')
 <script>

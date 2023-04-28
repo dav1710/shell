@@ -5,10 +5,10 @@
     <link rel="shortcut icon" href="{{ asset('img/logo.png') }}" type="image/x-icon">
 </head>
 <body>
-    <style> 
+    <style>
         input:-webkit-autofill,
-        input:-webkit-autofill:hover, 
-        input:-webkit-autofill:focus, 
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
         input:-webkit-autofill:active{
             -webkit-box-shadow: 0 0 0 30px #0e1c24 inset !important;
         }
@@ -64,22 +64,15 @@
         }
         .login-box .user-box label {
             position: absolute;
-            top:0;
+            top:-20px;
             left: 0;
             padding: 10px 0;
-            font-size: 16px;
-            color: #fff;
+            font-size: 12px;
+            color: #03e9f4;
             pointer-events: none;
             transition: .5s;
         }
 
-        .login-box .user-box input:focus ~ label,
-        .login-box .user-box input:valid ~ label {
-            top: -20px;
-            left: 0;
-            color: #03e9f4;
-            font-size: 12px;
-        }
 
         .login-box form button {
             position: relative;
@@ -203,11 +196,11 @@
             <form action="{{ route('login.post') }}" method="POST">
                 @csrf
                 <div class="user-box">
-                    <input type="text" name="email" id="email" required>
+                    <input type="text" name="email" id="email" placeholder="email" required>
                     <label for="email">Մուտքանուն</label>
                 </div>
                 <div class="user-box">
-                    <input type="password" name="password" id="password" required>
+                    <input type="password" name="password" id="password" placeholder="password" required>
                     <label for="password">Գաղտնաբառ</label>
                 </div>
                 <div class="form-check">

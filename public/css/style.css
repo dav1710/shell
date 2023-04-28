@@ -498,3 +498,21 @@ body {
 .about_text_description{
     margin-top: 10px;
 }
+
+.our_contact_card{
+    text-align: center;
+    margin: 0 auto;
+}
+.our_contact_card img{
+    width: 122px;
+    height: 122px;
+    margin: 0 auto;
+}
+.our_contact_card p{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0 auto;
+    width: 80%;
+    color: #475E80;
+}
