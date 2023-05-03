@@ -109,6 +109,23 @@
         </div>
     </div>
 </section>
+
+<footer class="footer">
+    <div class="footer_grid">
+        <div class="footer_grid_item">
+            <div id="map"></div>
+        </div>
+        <div class="footer_grid_item">
+
+        </div>
+        <div class="footer_grid_item">
+
+        </div>
+        <div class="footer_grid_item">
+
+        </div>
+    </div>
+</footer>
 @endsection
 @section('scripts')
 <script>

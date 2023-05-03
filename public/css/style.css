@@ -347,6 +347,8 @@ body {
 }
 
 .services_title{
+    font-size: 25px;
+    font-weight: 600;
     text-align: center;
 }
 .our_services_card p{
@@ -455,6 +457,8 @@ body {
     height: 340px !important;
 }
 .shop_title{
+    font-size: 25px;
+    font-weight: 600;
     text-align: center;
     margin-top: 80px;
     margin-bottom: 57px;
@@ -463,6 +467,8 @@ body {
     margin-bottom: 65px;
 }
 .about_title{
+    font-size: 25px;
+    font-weight: 600;
     text-align: center;
     margin-top: 50px;
     margin-bottom: 65px;
@@ -515,4 +521,13 @@ body {
     margin: 0 auto;
     width: 80%;
     color: #475E80;
+}
+.contact_title{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 72px;
+}
+.contact{
+    margin-bottom: 92px;
 }
