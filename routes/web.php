@@ -8,6 +8,8 @@ use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\MapController;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +31,10 @@ Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('login', [AuthController::class, 'index'])->name('login');
 Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post');
 
+Route::get('/markers', function () {
+    $markers = DB::table('maps')->get();
+    return response()->json($markers);
+});
 Route::middleware('auth')->group(function () {
     Route::get('/admin', [AdminController::class, 'index'])->name('dashboard');
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
@@ -40,6 +46,7 @@ Route::middleware('auth')->group(function () {
 			'product' => ProductController::class,
 			'contact' => ContactController::class,
 			'about' => AboutController::class,
+			'map' => MapController::class,
 		]);
     });
 });

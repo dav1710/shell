@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ asset('admin_panel/dist/css/adminlte.min.css') }}">
     <link rel="stylesheet" href="{{ asset('admin_panel/dist/css/file.css') }}">
     <link rel="stylesheet" href="{{ asset('admin_panel/dist/css/font-awesome.css') }}">
+    <link rel="stylesheet" href="{{ asset('leaflet/leaflet.css') }}" crossorigin="" />
     @yield('styles')
 
 </head>
@@ -143,6 +144,12 @@
                                 <p>Կոնտակտներ</p>
                             </a>
                         </li>
+                        <li class="nav-item {{ str_contains(Request::url(), 'admin/map') ? 'active' : '' }}">
+                            <a href="{{ route('map.index') }}" class="nav-link">
+                                <i class="nav-icon fa-solid fa-map"></i>
+                                <p>Հասցեներ</p>
+                            </a>
+                        </li>
 
                     </ul>
                 </nav>
@@ -173,6 +180,7 @@
     <script src="{{ asset('admin_panel/dist/js/ckeditor.js')}}" crossorigin="anonymous"></script>
     <script src="{{ asset('admin_panel/dist/js/adminlte.min.js') }}"></script>
     <script src="{{ asset('admin_panel/dist/js/file.js') }}"></script>
+    <script src="{{ asset('leaflet/leaflet.js') }}" crossorigin=""></script>
     @yield('scripts')
 </body>
 

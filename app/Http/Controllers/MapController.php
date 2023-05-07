@@ -1,10 +1,7 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\MapRequest;
-use App\Models\Map;
 use Illuminate\Http\Request;
 
 class MapController extends Controller
@@ -16,7 +13,7 @@ class MapController extends Controller
      */
     public function index()
     {
-        return view('admin.map.index');
+        //
     }
 
     /**
@@ -26,7 +23,7 @@ class MapController extends Controller
      */
     public function create()
     {
-        return view('admin.map.create');
+        //
     }
 
     /**
@@ -35,11 +32,9 @@ class MapController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(MapRequest $request)
+    public function store(Request $request)
     {
-        $data = $request->all();
-        Map::create($data);
-        return redirect()->route('map.index')->with('success', 'Հասցեն հաջողությամբ ավելացել է');
+        //
     }
 
     /**
@@ -59,9 +54,9 @@ class MapController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Map $map)
+    public function edit($id)
     {
-        return view('admin.map.edit', ['item' => $map]);
+        //
     }
 
     /**
@@ -71,11 +66,9 @@ class MapController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(MapRequest $request, Map $map)
+    public function update(Request $request, $id)
     {
-        $data = $request->all();
-        $map->update();
-        return redirect()->route('map.index')->with('success', 'Հասցեն հաջողությամբ ավելացել է');
+        //
     }
 
     /**
