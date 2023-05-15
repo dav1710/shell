@@ -23,7 +23,8 @@
     </div>
   </div>
 </section>
-<section class="our_services_section mt-4" id="services">
+<hr>
+<section class="our_services_section" id="services">
     <div class="container">
         <h2 class="services_title">Our Services</h2>
         <div class="our_services d-flex justify-content-around">
@@ -46,9 +47,9 @@
         </div>
     </div>
 </section>
-
-<section id="our_shop">
-    <div class="container our_shop">
+<hr>
+<section id="shop">
+    <div class="our_shop">
         <h2 class="shop_title">Our Shop</h2>
         <div class="row">
             <div class="owl-carousel product-carousel owl-theme">
@@ -67,7 +68,7 @@
         </div>
     </div>
 </section>
-
+<hr>
 <section id="about">
     <div class="container about">
         <h2 class="about_title">About</h2>
@@ -89,8 +90,8 @@
         </div>
     </div>
 </section>
-
-<section class="contact mt-4" id="contact">
+<hr>
+<section class="contact" id="contact_us">
     <div class="container">
         <h2 class="contact_title">Contact Us</h2>
         <div class="our_services d-flex justify-content-around">
@@ -109,20 +110,73 @@
         </div>
     </div>
 </section>
-
+<hr>
 <footer class="footer">
     <div class="footer_grid">
         <div class="footer_grid_item">
-            <div id="map"></div>
+            <div id="map" style="width: 300px; height: 300px; margin: 0px auto 30px auto"></div>
         </div>
         <div class="footer_grid_item">
-
+            <div class="d-flex flex-column">
+                <div class="information_title">
+                    <h2>Contact Information</h2>
+                </div>
+                <div class="information_address">
+                    <h2>Address</h2>
+                    <p>Somewhere 45, 0015 Yerevan, Armenia</p>
+                </div>
+                <div class="information_phone">
+                    <h2>Phone</h2>
+                    <a href="tel:347-00-00-00">+347 00 00 00</a>
+                </div>
+                <div class="information_email">
+                    <h2>E-Mail</h2>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=smth@gmail.com" target="_blank">smth@gmail.com</a>
+                </div>
+            </div>
         </div>
         <div class="footer_grid_item">
+            <div class="d-flex flex-column">
+                <div class="stay_in_touch">
+                    <h2>Stay in Touch</h2>
+                    <div class="d-flex flex-row social_links">
+                        <a href="#"><img src="{{ asset('img/fb.png') }}" alt="fb"></a>
+                        <a href="#"><img src="{{ asset('img/instagram.png') }}" alt="instagram"></a>
+                        <a href="#"><img src="{{ asset('img/linkdin.png') }}" alt="linkdin"></a>
+                        <a href="#"><img src="{{ asset('img/twitter.png') }}" alt="twitter"></a>
+                    </div>
+                </div>
+                <div class="stay_in_touch">
+                    <h2>Support</h2>
+                    <div class="d-flex flex-column">
+                        <a href="#">Privacy and Policy</a>
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Cookies</a>
+                        <a href="#">Legal, Safety and Trademark info</a>
+                    </div>
+                </div>
 
+            </div>
         </div>
         <div class="footer_grid_item">
+            <div class="d-flex flex-column">
+                <div class="about_footer">
+                    <h2>About</h2>
+                    <div class="d-flex flex-column">
+                        <a href="#">Site Map</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                </div>
+                <div class="languages">
+                    <h2>Languages</h2>
+                    <div class="d-flex flex-column">
+                        <a href="#"><img src="{{ asset('img/united-kingdom.png') }}" alt="uk"> English</a>
+                        <a href="#"><img src="{{ asset('img/russia.png') }}" alt="russia"> Russia</a>
+                        <a href="#"><img src="{{ asset('img/armenia.png') }}" alt="armenia"> Armenia</a>
+                    </div>
+                </div>
 
+            </div>
         </div>
     </div>
 </footer>
@@ -148,5 +202,30 @@
             }
         }
     })
+
+    var mapOptions = {
+            center: [40.21452640742982, 44.52145498531859],
+            zoom: 10
+         }
+         // Creating a map object
+         var map = new L.map('map', mapOptions);
+
+         // Creating a Layer object
+         var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+
+         // Adding layer to the map
+         map.addLayer(layer);
+
+         $.ajax({
+            url: '/markers',
+            type: 'GET',
+            dataType: 'json',
+            success: function(data) {
+                $.each(data, function(index, element) {
+                    var marker = L.marker([element.latitude, element.longitude]).addTo(map);
+                    marker.bindPopup(element.address);
+                });
+            }
+        });
 </script>
 @endsection

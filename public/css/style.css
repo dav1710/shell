@@ -5,6 +5,9 @@
   padding: 0;
   box-sizing: inherit;
 }
+html{
+    scroll-padding-top: 100px;
+}
 body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
@@ -337,7 +340,9 @@ body {
     height: 556px;
     object-fit: cover;
 }
-
+.our_services_section {
+    margin-top: 40px;
+}
 .our_services_card img {
     width: 200px;
     height: 200px;
@@ -368,12 +373,6 @@ body {
   .card img {
     padding: 20px;
   }
-  .card {
-    margin: 0 0.5em;
-    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
-    border: none;
-    border-radius: 0;
-  }
   .our_shop_slider .carousel-inner {
     padding: 1em;
   }
@@ -403,6 +402,9 @@ body {
 }
 .carousel-control-next-icon{
     background-image: url('./../img/next.png') !important;
+}
+#shop{
+    margin-top: 40px;
 }
 .our_shop_slider .carousel-control-prev, .carousel-control-next{
     width: 56px !important;
@@ -449,28 +451,28 @@ body {
     left: 50%;
 }
 .product_image{
-    width: 227px !important;
     height: 100%;
 }
 .card{
-    width: 230px !important;
-    height: 340px !important;
+    margin: 0 0.5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+    border-radius: 0;
+    height: 368px !important;
 }
 .shop_title{
     font-size: 25px;
     font-weight: 600;
     text-align: center;
-    margin-top: 80px;
     margin-bottom: 57px;
 }
-.about{
-    margin-bottom: 65px;
+#about{
+    margin-top: 40px;
 }
 .about_title{
     font-size: 25px;
     font-weight: 600;
     text-align: center;
-    margin-top: 50px;
     margin-bottom: 65px;
 }
 .about_img{
@@ -529,5 +531,80 @@ body {
     margin-bottom: 72px;
 }
 .contact{
+    margin-top: 40px;
     margin-bottom: 92px;
+}
+.footer_grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.footer_grid_item h2 {
+    font-size: 21px;
+    font-weight: 600;
+    color: #3E3D3D;
+}
+.information_address p{
+    font-size: 16px;
+    font-weight: 300;
+    color: #535353;
+}
+.footer_grid_item a {
+    font-size: 16px;
+    font-weight: 300;
+    color: #535353;
+    text-decoration: none;
+}
+.information_address{
+    margin-bottom: 5px;
+}
+.information_address p{
+    margin-bottom: 0px;
+    width: 35%;
+}
+.information_address h2{
+    font-size: 18px;
+    font-weight: 400;
+    color: #535353;
+    margin-bottom: 3px;
+}
+.information_phone{
+    margin-bottom: 5px;
+}
+.information_phone h2{
+    font-size: 18px;
+    font-weight: 400;
+    color: #535353;
+    margin-bottom: 3px;
+}
+.information_email h2{
+    font-size: 18px;
+    font-weight: 400;
+    color: #535353;
+    margin-bottom: 3px;
+}
+.footer_grid_item > div{
+    margin: 30px auto;
+}
+.information_title{
+    margin-bottom: 5px;
+}
+.social_links{
+    margin: 15px 0px;
+}
+.social_links a{
+    margin-right: 14px;
+}
+.about_footer{
+    margin-bottom: 10px;
+}
+.footer{
+    width: 85%;
+    margin: 0 auto;
+}
+.carousel-item img{
+    height: 560px;
+}
+.our_shop{
+    width: 85%;
+    margin: 0 auto;
 }
