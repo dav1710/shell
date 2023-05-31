@@ -26,6 +26,7 @@
            <div class="f-flex logo_title">
                 <h1>Shell Licensee</h1>
                 <h2>Royal Oil </p>
+                <h2>{{ __('general.title') }}</h2>
            </div>
           </div>
 
@@ -54,7 +55,6 @@
     <script src="{{ asset('js/owl.carousel.min.js') }}" crossorigin="anonymous"></script>
     <script src="{{ asset('leaflet/leaflet.js') }}" crossorigin=""></script>
     <script src="{{ asset('js/main.js') }}"></script>
-
     @yield('scripts')
 </body>
 

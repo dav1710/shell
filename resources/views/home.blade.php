@@ -4,26 +4,26 @@
 @endsection
 @section('content')
 <section class="slider_section" id="home">
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active slider_li"></li>
-      <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="slider_li"></li>
-      <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="slider_li"></li>
-    </ol>
-    <div class="carousel-inner home_slider_inner">
-      <div class="carousel-item home_carousel_item active">
-        <img src="{{ asset('img/slider1.png') }}" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="{{ asset('img/slider2.png') }}" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="{{ asset('img/slider1.png') }}" class="d-block w-100" alt="...">
-      </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active slider_li"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="slider_li"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="slider_li"></li>
+        </ol>
+        <div class="carousel-inner home_slider_inner">
+            <div class="carousel-item home_carousel_item active">
+                <img src="{{ asset('img/slider1.png') }}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ asset('img/slider2.png') }}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ asset('img/slider1.png') }}" class="d-block w-100" alt="...">
+            </div>
+        </div>
     </div>
-  </div>
 </section>
-<hr>
+
 <section class="our_services_section" id="services">
     <div class="container">
         <h2 class="services_title">Our Services</h2>
@@ -47,7 +47,7 @@
         </div>
     </div>
 </section>
-<hr>
+
 <section id="shop">
     <div class="our_shop">
         <h2 class="shop_title">Our Shop</h2>
@@ -68,7 +68,7 @@
         </div>
     </div>
 </section>
-<hr>
+
 <section id="about">
     <div class="container about">
         <h2 class="about_title">About</h2>
@@ -90,7 +90,7 @@
         </div>
     </div>
 </section>
-<hr>
+
 <section class="contact" id="contact_us">
     <div class="container">
         <h2 class="contact_title">Contact Us</h2>
@@ -110,7 +110,7 @@
         </div>
     </div>
 </section>
-<hr>
+
 <footer class="footer">
     <div class="footer_grid">
         <div class="footer_grid_item">
@@ -170,9 +170,9 @@
                 <div class="languages">
                     <h2>Languages</h2>
                     <div class="d-flex flex-column">
-                        <a href="#"><img src="{{ asset('img/united-kingdom.png') }}" alt="uk"> English</a>
-                        <a href="#"><img src="{{ asset('img/russia.png') }}" alt="russia"> Russia</a>
-                        <a href="#"><img src="{{ asset('img/armenia.png') }}" alt="armenia"> Armenia</a>
+                        <a href="{{ app()->getLocale() == 'en' ? 'javascript:void(0)' : asset('locale/en') }}" class="lang" value="en"><img src="{{ asset('img/united-kingdom.png') }}" alt="uk"> English</a>
+                        <a href="{{ app()->getLocale() == 'ru' ? 'javascript:void(0)' : asset('locale/ru') }}" class="lang" value="ru"><img src="{{ asset('img/russia.png') }}" alt="russia"> Russia</a>
+                        <a href="{{ app()->getLocale() == 'am' ? 'javascript:void(0)' : asset('locale/am') }}" class="lang" value="am"><img src="{{ asset('img/armenia.png') }}" alt="armenia"> Armenia</a>
                     </div>
                 </div>
 
@@ -227,5 +227,6 @@
                 });
             }
         });
+
 </script>
 @endsection

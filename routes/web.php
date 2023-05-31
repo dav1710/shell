@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\MapController;
+use App\Http\Controllers\LangController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
@@ -30,6 +31,9 @@ Route::get('/', [HomeController::class, 'home'])->name('home');
 
 Route::get('login', [AuthController::class, 'index'])->name('login');
 Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post');
+
+Route::post('/hash', [LangController::class, 'hash']);
+Route::get('locale/{language}', [LangController::class, 'language']);
 
 Route::get('/markers', function () {
     $markers = DB::table('maps')->get();
