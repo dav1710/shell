@@ -28,6 +28,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/', [HomeController::class, 'home'])->name('home');
+Route::get('/products', [HomeController::class, 'product'])->name('more_product');
 
 Route::get('login', [AuthController::class, 'index'])->name('login');
 Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post');
