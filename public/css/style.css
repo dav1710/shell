@@ -609,3 +609,11 @@ body {
     width: 85%;
     margin: 0 auto;
 }
+.all_products{
+    margin-top: 120px !important;
+    margin-inline: auto !important;
+}
+.all_products .card{
+    width: 22% !important;
+    margin-bottom: 30px;
+}

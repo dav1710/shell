@@ -49,6 +49,75 @@
       </header>
     @yield('content')
 
+<footer class="footer">
+    <div class="footer_grid">
+        <div class="footer_grid_item">
+            <div id="map" style="width: 300px; height: 300px; margin: 0px auto 30px auto"></div>
+        </div>
+        <div class="footer_grid_item">
+            <div class="d-flex flex-column">
+                <div class="information_title">
+                    <h2>Contact Information</h2>
+                </div>
+                <div class="information_address">
+                    <h2>Address</h2>
+                    <p>Somewhere 45, 0015 Yerevan, Armenia</p>
+                </div>
+                <div class="information_phone">
+                    <h2>Phone</h2>
+                    <a href="tel:347-00-00-00">+347 00 00 00</a>
+                </div>
+                <div class="information_email">
+                    <h2>E-Mail</h2>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=smth@gmail.com" target="_blank">smth@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer_grid_item">
+            <div class="d-flex flex-column">
+                <div class="stay_in_touch">
+                    <h2>Stay in Touch</h2>
+                    <div class="d-flex flex-row social_links">
+                        <a href="#"><img src="{{ asset('img/fb.png') }}" alt="fb"></a>
+                        <a href="#"><img src="{{ asset('img/instagram.png') }}" alt="instagram"></a>
+                        <a href="#"><img src="{{ asset('img/linkdin.png') }}" alt="linkdin"></a>
+                        <a href="#"><img src="{{ asset('img/twitter.png') }}" alt="twitter"></a>
+                    </div>
+                </div>
+                <div class="stay_in_touch">
+                    <h2>Support</h2>
+                    <div class="d-flex flex-column">
+                        <a href="#">Privacy and Policy</a>
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Cookies</a>
+                        <a href="#">Legal, Safety and Trademark info</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer_grid_item">
+            <div class="d-flex flex-column">
+                <div class="about_footer">
+                    <h2>About</h2>
+                    <div class="d-flex flex-column">
+                        <a href="#">Site Map</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                </div>
+                <div class="languages">
+                    <h2>Languages</h2>
+                    <div class="d-flex flex-column">
+                        <a href="{{ app()->getLocale() == 'en' ? 'javascript:void(0)' : asset('locale/en') }}" class="lang" value="en"><img src="{{ asset('img/united-kingdom.png') }}" alt="uk"> English</a>
+                        <a href="{{ app()->getLocale() == 'ru' ? 'javascript:void(0)' : asset('locale/ru') }}" class="lang" value="ru"><img src="{{ asset('img/russia.png') }}" alt="russia"> Russia</a>
+                        <a href="{{ app()->getLocale() == 'am' ? 'javascript:void(0)' : asset('locale/am') }}" class="lang" value="am"><img src="{{ asset('img/armenia.png') }}" alt="armenia"> Armenia</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
     <script src="{{ asset('js/jquery.js') }}"></script>
     <script src="{{ asset('js/popper.min.js') }}" crossorigin="anonymous"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}" crossorigin="anonymous"></script>

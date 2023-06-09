@@ -11,4 +11,8 @@ class HomeController extends Controller
         $product = Product::all();
         return view('home', compact('product'));
     }
+    public function product() {
+        $product = Product::all();
+        return view('product', compact('product'));
+    }
 }
