@@ -32,10 +32,10 @@
 
           <nav id="navbar" class="navbar col-6">
             <ul>
-              <li><a class="nav-link scrollto active" href="#home">Home</a></li>
-              <li><a class="nav-link scrollto" href="#shop">Our Shop</a></li>
-              <li><a class="nav-link scrollto" href="#about">About</a></li>
-              <li><a class="nav-link scrollto" href="#contact_us">Contact Us</a></li>
+              <li><a class="nav-link scrollto" href="#home" data-scroll="home">Home</a></li>
+              <li><a class="nav-link scrollto" href="#shop" data-scroll="shop">Our Shop</a></li>
+              <li><a class="nav-link scrollto" href="#about" data-scroll="about">About</a></li>
+              <li><a class="nav-link scrollto" href="#contact_us" data-scroll="contact_us">Contact Us</a></li>
             </ul>
             <i class="bi mobile-nav-toggle bi-list"></i>
           </nav>

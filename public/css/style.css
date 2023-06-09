@@ -181,6 +181,7 @@ body {
   .navbar .active {
     color: #1E1E1E;
     border-bottom: 3px solid #DB2D1B;
+    transition: .2s all;
   }
 
   .navbar a:hover,

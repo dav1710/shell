@@ -12,7 +12,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        return view('admin.contact.index', ['item' => Contact::first()]);
+        return view('admin.contact.index', ['contact' => Contact::latest()->get()]);
     }
 
     /**

@@ -3,7 +3,7 @@
     Home
 @endsection
 @section('content')
-<section class="slider_section" id="home">
+<section class="slider_section" id="home" data-anchor="home">
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <ol class="carousel-indicators">
             <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active slider_li"></li>
@@ -24,7 +24,7 @@
     </div>
 </section>
 
-<section class="our_services_section" id="services">
+<section class="our_services_section" id="services" data-anchor="services">
     <div class="container">
         <h2 class="services_title">Our Services</h2>
         <div class="our_services d-flex justify-content-around">
@@ -48,7 +48,7 @@
     </div>
 </section>
 
-<section id="shop">
+<section id="shop" data-anchor="shop">
     <div class="our_shop">
         <h2 class="shop_title">Our Shop</h2>
         <div class="row">
@@ -69,7 +69,7 @@
     </div>
 </section>
 
-<section id="about">
+<section id="about" data-anchor="about">
     <div class="container about">
         <h2 class="about_title">About</h2>
         <div class="row d-flex">
@@ -91,7 +91,7 @@
     </div>
 </section>
 
-<section class="contact" id="contact_us">
+<section class="contact" id="contact_us" data-anchor="contact_us">
     <div class="container">
         <h2 class="contact_title">Contact Us</h2>
         <div class="our_services d-flex justify-content-around">
@@ -170,9 +170,9 @@
                 <div class="languages">
                     <h2>Languages</h2>
                     <div class="d-flex flex-column">
-                        <a href="{{ app()->getLocale() == 'en' ? 'javascript:void(0)' : asset('locale/en') }}" class="lang" value="en"><img src="{{ asset('img/united-kingdom.png') }}" alt="uk"> English</a>
-                        <a href="{{ app()->getLocale() == 'ru' ? 'javascript:void(0)' : asset('locale/ru') }}" class="lang" value="ru"><img src="{{ asset('img/russia.png') }}" alt="russia"> Russia</a>
-                        <a href="{{ app()->getLocale() == 'am' ? 'javascript:void(0)' : asset('locale/am') }}" class="lang" value="am"><img src="{{ asset('img/armenia.png') }}" alt="armenia"> Armenia</a>
+                        <a href="{{ app()->getLocale() == 'en' ? 'javascript:void(0)' : asset('locale/en') }}" class="lang"><img src="{{ asset('img/united-kingdom.png') }}" alt="uk"> English</a>
+                        <a href="{{ app()->getLocale() == 'ru' ? 'javascript:void(0)' : asset('locale/ru') }}" class="lang"><img src="{{ asset('img/russia.png') }}" alt="russia"> Russia</a>
+                        <a href="{{ app()->getLocale() == 'am' ? 'javascript:void(0)' : asset('locale/am') }}" class="lang"><img src="{{ asset('img/armenia.png') }}" alt="armenia"> Armenia</a>
                     </div>
                 </div>
 
