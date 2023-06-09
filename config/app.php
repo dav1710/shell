@@ -93,6 +93,8 @@ return [
     |
     */
 
+    'use_fallback' => true,
+
     'fallback_locale' => 'am',
 
     /*
