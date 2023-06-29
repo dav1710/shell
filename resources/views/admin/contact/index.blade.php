@@ -30,34 +30,36 @@
                 <div class="card-body p-0">
                     <table class="table table-hover">
                         <tbody class="text-nowrap">
-                            <tr>
-                                <th>Հասցե:</th>
-                                <td>{{ $item->address }}</td>
-                            </tr>
-                            <tr>
-                                <th>Հեռախոսահամար:</th>
-                                <td>{{ $item->phone }}</td>
-                            </tr>
-                            <tr>
-                                <th>Էլ-հասցե:</th>
-                                <td>{{ $item->email }}</td>
-                            </tr>
-                            <tr>
-                                <th>Facebook-ի հղում:</th>
-                                <td>{{ $item->fb_link }}</td>
-                            </tr>
-                            <tr>
-                                <th>Instagram-ի հղում:</th>
-                                <td>{{ $item->insta_link }}</td>
-                            </tr>
-                            <tr>
-                                <th>Linkedin-ի հղում:</th>
-                                <td>{{ $item->ld_link }}</td>
-                            </tr>
-                            <tr>
-                                <th>Twitter-ի հղում:</th>
-                                <td>{{ $item->tw_link }}</td>
-                            </tr>
+                            @foreach ($contact as $item)
+                                <tr>
+                                    <th>Հասցե:</th>
+                                    <td>{{ $item->address }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Հեռախոսահամար:</th>
+                                    <td>{{ $item->phone }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Էլ-հասցե:</th>
+                                    <td>{{ $item->email }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Facebook-ի հղում:</th>
+                                    <td>{{ $item->fb_link }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Instagram-ի հղում:</th>
+                                    <td>{{ $item->insta_link }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Linkedin-ի հղում:</th>
+                                    <td>{{ $item->ld_link }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Twitter-ի հղում:</th>
+                                    <td>{{ $item->tw_link }}</td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

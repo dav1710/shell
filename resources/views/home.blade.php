@@ -3,7 +3,7 @@
     Home
 @endsection
 @section('content')
-<section class="slider_section" id="home">
+<section class="slider_section" id="home" data-anchor="home">
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <ol class="carousel-indicators">
             <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active slider_li"></li>
@@ -24,7 +24,7 @@
     </div>
 </section>
 
-<section class="our_services_section" id="services">
+<section class="our_services_section" id="services" data-anchor="services">
     <div class="container">
         <h2 class="services_title">Our Services</h2>
         <div class="our_services d-flex justify-content-around">
@@ -48,7 +48,7 @@
     </div>
 </section>
 
-<section id="shop">
+<section id="shop" data-anchor="shop">
     <div class="our_shop">
         <h2 class="shop_title">Our Shop</h2>
         <div class="row">
@@ -70,7 +70,7 @@
     </div>
 </section>
 
-<section id="about">
+<section id="about" data-anchor="about">
     <div class="container about">
         <h2 class="about_title">About</h2>
         <div class="row d-flex">
@@ -92,7 +92,7 @@
     </div>
 </section>
 
-<section class="contact" id="contact_us">
+<section class="contact" id="contact_us" data-anchor="contact_us">
     <div class="container">
         <h2 class="contact_title">Contact Us</h2>
         <div class="our_services d-flex justify-content-around">
@@ -111,12 +111,11 @@
         </div>
     </div>
 </section>
-
 @endsection
 @section('scripts')
 <script>
     $('.product-carousel').owlCarousel({
-        loop:false,
+        loop:true,
         margin:10,
         nav:true,
         dots:false,
