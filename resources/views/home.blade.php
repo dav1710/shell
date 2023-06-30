@@ -6,20 +6,18 @@
 <section class="slider_section" id="home" data-anchor="home">
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <ol class="carousel-indicators">
-            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active slider_li"></li>
-            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="slider_li"></li>
-            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="slider_li"></li>
+				@for ($i = 0; $i < count($slides); $i++)
+                    <li data-bs-target="#carouselExampleIndicators" aria-current="true" aria-label="Slide {{ $i }}" data-bs-slide-to="{{ $i }}" class="slider_li"></li>
+                    {{-- <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $i }}" class="slider_li"></li>
+                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $i }}" class="slider_li"></li> --}}
+				@endfor
         </ol>
         <div class="carousel-inner home_slider_inner">
-            <div class="carousel-item home_carousel_item active">
-                <img src="{{ asset('img/slider1.png') }}" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset('img/slider2.png') }}" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset('img/slider1.png') }}" class="d-block w-100" alt="...">
-            </div>
+            @foreach ($slides as $slide)
+                <div class="carousel-item home_carousel_item">
+                    <img src="{{ asset('storage/uploads/slide/' . $slide->img) }}" class="d-block w-100" alt="...">
+                </div>
+            @endforeach
         </div>
     </div>
 </section>
@@ -28,22 +26,14 @@
     <div class="container">
         <h2 class="services_title">Our Services</h2>
         <div class="our_services d-flex justify-content-around">
-            <div class="our_services_card d-flex flex-column col-3">
-                <img src="{{ asset('img/our_service.png') }}" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-            </div>
-            <div class="our_services_card d-flex flex-column col-3">
-                <img src="{{ asset('img/our_service.png') }}" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-            </div>
-            <div class="our_services_card d-flex flex-column col-3">
-                <img src="{{ asset('img/our_service.png') }}" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-            </div>
-            <div class="our_services_card d-flex flex-column col-3">
-                <img src="{{ asset('img/our_service.png') }}" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-            </div>
+            @foreach ($service as $item)
+                <div class="our_services_card d-flex flex-column col-3">
+                    <div class="service_image_container">
+                        <img src="{{ asset('storage/uploads/service/'.$item->img) }}" alt="{{ $item->img }}">
+                    </div>
+                    <p>{{ $item->{'title_' . app()->getLocale() } ? $item->{'title_' . app()->getLocale() } : $item->title_am }}</p>
+                </div>
+            @endforeach
         </div>
     </div>
 </section>
@@ -58,7 +48,7 @@
                         <div class="card">
                             <img src="{{ asset('storage/uploads/product/'.$item->img) }}" alt="{{ $item->img }}" class="product_image">
                             <div class="card-body">
-                                <h5 class="card-title">{{ $item->title_am }}</h5>
+                                <h5 class="card-title">{{ $item->{'title_' . app()->getLocale() } ? $item->{'title_' . app()->getLocale() } : $item->title_am }}</h5>
                                 <p class="price">{{ $item->price }} AMD</p>
                             </div>
                         </div>
@@ -120,6 +110,9 @@
         nav:true,
         dots:false,
         rewind: true,
+        autoplay:true,
+        autoplayTimeout:3000,
+        autoplayHoverPause:true,
         navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
         responsive:{
             0:{

@@ -346,7 +346,14 @@ body {
 .our_services_section {
     margin-top: 40px;
 }
-.our_services_card img {
+.service_image_container img {
+    position: relative;
+    width: 64px;
+    height: 74px;
+    left: 33%;
+    top: 30%;
+}
+.service_image_container {
     width: 200px;
     height: 200px;
     object-fit: fill;

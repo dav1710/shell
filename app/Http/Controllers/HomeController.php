@@ -3,13 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Service;
+use App\Models\Slide;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function home() {
         $product = Product::all();
-        return view('home', compact('product'));
+        $service = Service::all();
+        $slides = Slide::all();
+        return view('home', compact('product', 'service', 'slides'));
     }
     public function product() {
         $product = Product::all();

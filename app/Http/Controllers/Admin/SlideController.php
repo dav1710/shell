@@ -64,7 +64,10 @@ class SlideController extends Controller
     {
         File::delete(public_path('storage/uploads/slide/' . $slide->img));
         $filename = $request->file('img')->hashName();
-        Image::make($request->file('img'))->resize(1920, 720)->save(public_path('storage/uploads/slide/' . $filename));
+        Image::make($request->file('img'))->resize(1920, null, function ($c) {
+            $c->aspectRatio();
+            $c->upsize();
+        })->save(public_path('storage/uploads/slide/' . $filename));
         $slide->img = $filename;
 
         $slide->update();

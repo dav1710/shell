@@ -3,7 +3,7 @@
 @section('title')
     Փոփոխել սերվիս
 @endsection
- 
+
 @section('content')
     <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -33,24 +33,12 @@
                                     <input type="text" value="{{ $item['title_am'] }}" name="title_am" class="form-control" id="title_am" placeholder="Մուտքագրել վերնագիր հայերեն">
                                 </div>
                                 <div class="form-group">
-                                    <label for="title_ru">Վերնագիր Հայերեն</label>
+                                    <label for="title_ru">Վերնագիր Ռուսերեն</label>
                                     <input type="text" value="{{ $item['title_ru'] }}" name="title_ru" class="form-control" id="title_ru" placeholder="Մուտքագրել վերնագիր ռուսերեն">
                                 </div>
                                 <div class="form-group">
                                     <label for="title_en">Վերնագիր Անգլերեն</label>
                                     <input type="text" value="{{ $item['title_en'] }}" name="title_en" class="form-control" id="title_en" placeholder="Մուտքագրել վերնագիր անգլերեն">
-                                </div>
-                                <div class="form-group">
-                                    <label for="editor">Բովանդակություն Հայերեն</label>
-                                    <textarea id="editor" name="content_am" class="form-control" placeholder="Մուտքագրել բովանդակություն հայերեն">{{ $item['content_am'] }}</textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="editor2">Բովանդակություն Ռուսերեն</label>
-                                    <textarea id="editor2" name="content_ru" class="form-control" placeholder="Մուտքագրել բովանդակություն ռուսերեն">{{ $item['content_ru'] }}</textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="editor3">Բովանդակություն Անգլերեն</label>
-                                    <textarea id="editor3" name="content_en" class="form-control" placeholder="Մուտքագրել բովանդակություն անգլերեն">{{ $item['content_en'] }}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <p class="font-bold">Նկար</p>

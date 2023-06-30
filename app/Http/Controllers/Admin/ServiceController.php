@@ -35,7 +35,9 @@ class ServiceController extends Controller
 
         if ($request->hasFile('img')) {
             $filename = $request->file('img')->hashName();
-            Image::make($request->file('img'))->resize(1920, 720)->save(public_path('storage/uploads/service/' . $filename));
+            Image::make($request->file('img'))->resize(64, 74, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save(public_path('storage/uploads/service/' . $filename));
             $data['img'] = $filename;
         }
 
@@ -72,7 +74,9 @@ class ServiceController extends Controller
             }
 
             $filename = $request->file('img')->hashName();
-            Image::make($request->file('img'))->resize(1920, 720)->save(public_path('storage/uploads/service/' . $filename));
+            Image::make($request->file('img'))->resize(64, 74, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save(public_path('storage/uploads/service/' . $filename));
             $data['img'] = $filename;
         }
         else if ($request->delete_image) {

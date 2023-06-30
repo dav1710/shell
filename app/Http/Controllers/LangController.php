@@ -16,9 +16,11 @@ class LangController extends Controller
 
     public function language($locale)
     {
-        in_array($locale, ['am', 'en', 'ru']) ? App::setLocale($locale) : Session::put('locale', 'am');
+        in_array($locale, ['am', 'en', 'ru']) ? Session::put('locale', $locale) : Session::put('locale', 'am');
+        // dd(in_array($locale, ['am', 'en', 'ru']) );
+        // in_array($locale, ['am', 'en', 'ru']) ? App::setLocale($locale) : Session::put('locale', 'am');
 
-        App::setLocale($locale);
+        // App::setLocale($locale);
         return Redirect::to(URL::previous() . Session::get('hash'));
     }
 }

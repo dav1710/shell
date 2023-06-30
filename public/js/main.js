@@ -1,3 +1,9 @@
+
+//Carousel
+$('.carousel-item:first').addClass('active');
+$('.carousel-indicators li:first').addClass('active');
+
+
 $(window).scroll(function() {
     var windscroll = $(window).scrollTop();
     console.log(4444);

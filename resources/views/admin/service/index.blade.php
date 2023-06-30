@@ -34,9 +34,6 @@
                                     Վերնագիր
                                 </th>
                                 <th>
-                                    Բովանդակություն
-                                </th>
-                                <th>
                                     Նկար
                                 </th>
                             </tr>
@@ -50,12 +47,9 @@
                                     <td>
                                         {{ $item['title_am'] }}
                                     </td>
-                                    <td class="truncate">
-                                        {!! $item['content_am'] !!}
-                                    </td>
                                     <td>
                                         @if ($item['img'])
-                                            <img height="100" width="200" src="{{ asset('storage/uploads/service/' . $item['img']) }}">
+                                            <img src="{{ asset('storage/uploads/service/' . $item['img']) }}">
                                         @endif
                                     </td>
                                     <td class="project-actions text-right">
