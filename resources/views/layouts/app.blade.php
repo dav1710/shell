@@ -26,7 +26,6 @@
            <div class="f-flex logo_title">
                 <h1>Shell Licensee</h1>
                 <h2>Royal Oil </p>
-                <h2>{{ __('general.title') }}</h2>
            </div>
           </div>
 
@@ -40,10 +39,14 @@
             <i class="bi mobile-nav-toggle bi-list"></i>
           </nav>
           <div class="search col-3">
-            <div class="container_search">
-                <input type="text" maxlength= "12"  placeholder="Search" class="searchbar">
-            <img src="{{ asset('img/search.png') }}" alt="Magnifying Glass" class="button">
-            </div>
+            <form action="{{ route('search') }}" method="GET">
+                @csrf
+                @method('GET')
+                <div class="container_search">
+                    <input type="text" maxlength= "12" name="search"  placeholder="Search" class="searchbar">
+                    <img src="{{ asset('img/search.png') }}" alt="Magnifying Glass" class="button">
+                </div>
+            </form>
           </div>
         </div>
       </header>

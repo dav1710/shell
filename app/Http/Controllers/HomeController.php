@@ -19,4 +19,13 @@ class HomeController extends Controller
         $product = Product::all();
         return view('product', compact('product'));
     }
+    public function search(Request $request) {
+        dd($request->search);
+        $search_result = Product::where('title_am', 'like', '%' . $request['search'] . '%')
+                                ->orWhere('title_en', 'like', '%' . $request['search'] . '%')
+                                ->orWhere('content_am', 'like', '%' . $request['search'] . '%')
+                                ->orWhere('content_en', 'like', '%' . $request['search'] . '%')
+                                ->get();
+        return view('search', compact('search'));
+    }
 }
