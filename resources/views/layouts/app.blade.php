@@ -22,11 +22,11 @@
         <div class="container container_header d-flex align-items-center justify-content-around">
 
           <div class="d-flex logo col-3">
-                <img src="{{ asset('img/logo.png') }}" alt="logo">
-           <div class="f-flex logo_title">
-                <h1>Shell Licensee</h1>
-                <h2>Royal Oil </p>
-           </div>
+                <a href="/"><img src="{{ asset('img/logo.png') }}" alt="logo"></a>
+                <div class="f-flex logo_title">
+                        <h1>Shell Licensee</h1>
+                        <h2>Royal Oil </p>
+                </div>
           </div>
 
           <nav id="navbar" class="navbar col-6">
@@ -40,11 +40,11 @@
           </nav>
           <div class="search col-3">
             <form action="{{ route('search') }}" method="GET">
-                @csrf
                 @method('GET')
                 <div class="container_search">
                     <input type="text" maxlength= "12" name="search"  placeholder="Search" class="searchbar">
-                    <img src="{{ asset('img/search.png') }}" alt="Magnifying Glass" class="button">
+                    <input type="image" src={{ asset('img/search.png') }} alt="Submit feedback" class="button">
+                    {{-- <img src="{{ asset('img/search.png') }}" alt="Magnifying Glass" > --}}
                 </div>
             </form>
           </div>

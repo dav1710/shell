@@ -18,6 +18,9 @@ body {
     font-family: "Open Sans", sans-serif;
     background-color: #F9F9F9 !important;
     color: #444444;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 
   a {
@@ -192,7 +195,7 @@ body {
 
   }
   .searchbar {
-    font-size: 2.4rem;
+    font-size: 16px;
     width: 18rem;
     height: 66px;
     border: none;
@@ -611,6 +614,7 @@ body {
     margin-bottom: 10px;
 }
 .footer{
+    margin-top: auto;
     width: 100%;
     background-color: #FEFEFE;
     padding: 33px 0;
