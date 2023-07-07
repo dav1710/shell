@@ -68,15 +68,17 @@
                 <img src="{{ asset('img/about.png') }}" alt="about">
             </div>
             <div class="about_text">
+                @foreach ($about as $item)
                 <div class="about_text_title">
-                    <p>Oil and Gas Company About</p>
+                    <p>{{ $item->{'title_' . app()->getLocale() } ? $item->{'title_' . app()->getLocale() } : $item->title_am }}</p>
                 </div>
                 <div class="about_text_subtitle">
-                    <p>Subtitle Here</p>
+                    <p>{{ $item->{'subtitle_' . app()->getLocale() } ? $item->{'subtitle_' . app()->getLocale() } : $item->subtitle_am }}</p>
                 </div>
                 <div class="about_text_description">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <p>{{ $item->{'content_' . app()->getLocale() } ? $item->{'content_' . app()->getLocale() } : $item->content_am }}</p>
                 </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -122,8 +124,12 @@
                 items:3
             },
             1000:{
+                items:4
+            },
+            1640:{
                 items:5
             }
+
         }
     })
 

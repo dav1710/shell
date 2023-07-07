@@ -6,7 +6,6 @@ $('.carousel-indicators li:first').addClass('active');
 
 $(window).scroll(function() {
     var windscroll = $(window).scrollTop();
-    console.log(4444);
     if (windscroll >= 100) {
         $('section').each(function(i) {
             if ($(this).position().top <= windscroll - 20) {
@@ -48,4 +47,8 @@ var mapOptions = {
             marker.bindPopup(element.address);
         });
     }
+});
+
+$(window).bind('hashchange',function(event){
+    history.replaceState(null, null, ' ');
 });

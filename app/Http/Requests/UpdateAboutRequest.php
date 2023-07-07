@@ -22,7 +22,9 @@ class UpdateAboutRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'content_am' => 'string|min:3|max:520',
+            'content_ru' => 'string|min:3|max:520',
+            'content_en' => 'string|min:3|max:520'
         ];
     }
 }

@@ -482,6 +482,13 @@ body {
     text-align: center;
     margin-bottom: 57px;
 }
+.more_product{
+    position: absolute;
+    right: 10%;
+    color: #A92117;
+    font-size: 18px;
+    text-decoration: none !important;
+}
 #about{
     margin-top: 40px;
 }
@@ -513,7 +520,7 @@ body {
     font-weight: 300;
 }
 .about_text_title{
-    width: inherit;
+    width: 90%;
     margin-top: 80px;
 }
 .about_text_subtitle{
@@ -638,4 +645,27 @@ body {
 .all_products .card{
     width: 22% !important;
     margin-bottom: 30px;
+}
+@media screen and (max-width: 1640px) {
+    .logo_title h1 {
+        font-size: 19.79px !important;
+        line-height: 8.26px;
+    }
+    /* #header .logo img {
+        margin-right: 15px;
+    } */
+    .navbar li{
+        margin-right: 10%;
+    }
+    .navbar a, .navbar a:focus{
+        font-size: 17px;
+    }
+}
+@media screen and (max-width: 1378px) {
+    .owl-nav{
+        width: 98%;
+    }
+    .card img{
+        width: 210px !important;
+    }
 }

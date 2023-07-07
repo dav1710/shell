@@ -20,7 +20,7 @@ class AboutController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.about.create');
     }
 
     /**
@@ -28,7 +28,10 @@ class AboutController extends Controller
      */
     public function store(UpdateAboutRequest $request)
     {
-        //
+        $data = $request->all();
+
+        About::create($data);
+        return redirect()->route('about.index')->with('success', 'Հաջողությամբ ավելացել է');
     }
 
     /**

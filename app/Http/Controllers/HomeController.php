@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
 use App\Models\Product;
 use App\Models\Service;
 use App\Models\Slide;
@@ -13,10 +14,11 @@ class HomeController extends Controller
         $product = Product::all();
         $service = Service::all();
         $slides = Slide::all();
-        return view('home', compact('product', 'service', 'slides'));
+        $about = About::all();
+        return view('home', compact('product', 'service', 'slides', 'about'));
     }
     public function product() {
-        $product = Product::all();
+        $product = Product::paginate(4);
         return view('product', compact('product'));
     }
     public function search(Request $request) {
@@ -25,7 +27,7 @@ class HomeController extends Controller
                                 ->orWhere('title_en', 'like', '%' . $request->search . '%')
                                 ->orWhere('content_am', 'like', '%' . $request->search . '%')
                                 ->orWhere('content_en', 'like', '%' . $request->search . '%')
-                                ->get();
+                                ->paginate(12);
         return view('search', compact('search_result'));
     }
 }

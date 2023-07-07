@@ -10,11 +10,11 @@
         input:-webkit-autofill:hover,
         input:-webkit-autofill:focus,
         input:-webkit-autofill:active{
-            -webkit-box-shadow: 0 0 0 30px #0e1c24 inset !important;
+            -webkit-box-shadow: 0 0 0 30px #eee inset !important;
         }
 
         input:-webkit-autofill{
-            -webkit-text-fill-color: white !important;
+            -webkit-text-fill-color: black !important;
         }
 
         html {
@@ -24,7 +24,7 @@
             margin:0;
             padding:0;
             font-family: sans-serif;
-            background: linear-gradient(180deg, #1D3544 0%, #0C212E 100%);
+            background: #ECAF0C;
         }
 
         .login-box {
@@ -34,7 +34,7 @@
             width: 400px;
             padding: 40px;
             transform: translate(-50%, -50%);
-            background: rgba(0,0,0,.4);
+            background: rgb(238,238,238);
             box-sizing: border-box;
             box-shadow: 0 15px 25px rgba(0,0,0,.6);
             border-radius: 10px;
@@ -43,7 +43,7 @@
         .login-box h2 {
             margin: 0 0 30px;
             padding: 0;
-            color: #fff;
+            color: #ECAF0C;
             text-align: center;
         }
 
@@ -55,10 +55,10 @@
             width: 100%;
             padding: 10px 0;
             font-size: 16px;
-            color: #fff;
+            color: #ECAF0C;
             margin-bottom: 30px;
             border: none;
-            border-bottom: 1px solid #fff;
+            border-bottom: 1px solid #ECAF0C;
             outline: none;
             background: transparent;
         }
@@ -68,7 +68,7 @@
             left: 0;
             padding: 10px 0;
             font-size: 12px;
-            color: #03e9f4;
+            color: #ECAF0C;
             pointer-events: none;
             transition: .5s;
         }
@@ -78,7 +78,7 @@
             position: relative;
             display: inline-block;
             padding: 10px 20px;
-            color: #03e9f4;
+            color: #ECAF0C;
             font-size: 16px;
             text-decoration: none;
             text-transform: uppercase;
@@ -92,13 +92,13 @@
         }
 
         .login-box button:hover {
-            background: #03e9f4;
+            background: #ECAF0C;
             color: #fff;
             border-radius: 5px;
-            box-shadow: 0 0 5px #03e9f4,
-            0 0 25px #03e9f4,
-            0 0 50px #03e9f4,
-            0 0 100px #03e9f4;
+            box-shadow: 0 0 5px #ECAF0C,
+            0 0 25px #ECAF0C,
+            0 0 50px #ECAF0C,
+            0 0 100px #ECAF0C;
         }
 
         .login-box button span {
@@ -111,7 +111,7 @@
             left: -100%;
             width: 100%;
             height: 2px;
-            background: linear-gradient(90deg, transparent, #03e9f4);
+            background: linear-gradient(90deg, transparent, #ECAF0C);
             animation: btn-anim1 1s linear infinite;
         }
 
@@ -129,7 +129,7 @@
             right: 0;
             width: 2px;
             height: 100%;
-            background: linear-gradient(180deg, transparent, #03e9f4);
+            background: linear-gradient(180deg, transparent, #ECAF0C);
             animation: btn-anim2 1s linear infinite;
             animation-delay: .25s
         }
@@ -148,7 +148,7 @@
             right: -100%;
             width: 100%;
             height: 2px;
-            background: linear-gradient(270deg, transparent, #03e9f4);
+            background: linear-gradient(270deg, transparent, #ECAF0C);
             animation: btn-anim3 1s linear infinite;
             animation-delay: .5s
         }
@@ -167,7 +167,7 @@
             left: 0;
             width: 2px;
             height: 100%;
-            background: linear-gradient(360deg, transparent, #03e9f4);
+            background: linear-gradient(360deg, transparent, #ECAF0C);
             animation: btn-anim4 1s linear infinite;
             animation-delay: .75s
         }
@@ -186,7 +186,7 @@
         }
 
         .checkbox:checked ~ .checkbox-label {
-            color: #03e9f4;
+            color: #ECAF0C;
         }
     </style>
 

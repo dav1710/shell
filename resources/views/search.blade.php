@@ -13,6 +13,7 @@
             </div>
         </div>
         @endforeach
+        {!! $search_result->appends(Request::all())->links() !!}
     </div>
 @endsection
 @section('scripts')

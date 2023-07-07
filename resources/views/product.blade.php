@@ -13,6 +13,8 @@
             </div>
         </div>
         @endforeach
+
+        {!! $product->appends(Request::all())->links() !!}
     </div>
 @endsection
 @section('scripts')
