@@ -669,3 +669,36 @@ body {
         width: 210px !important;
     }
 }
+@media screen and (max-width: 1272px) {
+    .owl-nav{
+        width: 97%;
+    }
+    .card img{
+        width: 190px !important;
+    }
+    .card-body{
+        padding: 0.5rem 0.5rem;
+    }
+}
+@media screen and (max-width: 1172px) {
+    .owl-nav{
+        width: 97%;
+    }
+    .card img{
+        width: 230px !important;
+    }
+    .card-body{
+        padding: 0.5rem 0.5rem;
+    }
+}
+@media screen and (max-width: 999px) {
+    .owl-nav{
+        width: 97%;
+    }
+    .card img{
+        width: 190px !important;
+    }
+    .card-body{
+        padding: 0.5rem 0.5rem;
+    }
+}
