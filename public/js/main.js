@@ -20,6 +20,22 @@ $(window).scroll(function() {
         $('nav a.active').removeClass('active');
         $('nav a:first').addClass('active');
     }
+    if ($(window).width() < 768) {
+        if (windscroll >= 100) {
+            $('section').each(function(i) {
+                if ($(this).position().top <= windscroll - 20) {
+                    $('.nav-item a.active').removeClass('active');
+                    $('.nav-item a').eq(i).addClass('active');
+                }
+            });
+
+        } else {
+
+            $('.nav-item').removeClass('fixed');
+            $('nav-item a.active').removeClass('active');
+            $('nav-item a:first').addClass('active');
+        }
+     }
 
 }).scroll();
 
@@ -52,3 +68,7 @@ var mapOptions = {
 $(window).bind('hashchange',function(event){
     history.replaceState(null, null, ' ');
 });
+
+ $(window).scroll(function(){
+    $('.collapse ').removeClass('show')
+ });

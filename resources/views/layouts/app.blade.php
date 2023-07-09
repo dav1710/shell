@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}" id="csrf-token">
-    {{-- <link rel="shortcut icon" href="{{ asset('img/ombuds_logo.png') }}" type="image/x-icon"> --}}
+    <link rel="shortcut icon" href="{{ asset('img/logo.png') }}" type="image/x-icon">
     <link href="{{ asset('css/style.css?v=' . date('YmdHis')) }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
@@ -19,24 +19,27 @@
 
 <body>
     <header id="header" class="fixed-top d-flex align-items-center header-scrolled">
-        <div class="container container_header d-flex align-items-center justify-content-around">
+        <div class="container container_header container_header_big_display align-items-center justify-content-around">
 
           <div class="d-flex logo col-3">
-                <a href="/"><img src="{{ asset('img/logo.png') }}" alt="logo"></a>
+                <a href="/"></a>
                 <div class="f-flex logo_title">
                         <h1>Shell Licensee</h1>
                         <h2>Royal Oil </p>
                 </div>
           </div>
-
-          <nav id="navbar" class="navbar col-6">
-            <ul>
-              <li><a class="nav-link scrollto" href="#home" data-scroll="home">Home</a></li>
-              <li><a class="nav-link scrollto" href="#shop" data-scroll="shop">Our Shop</a></li>
-              <li><a class="nav-link scrollto" href="#about" data-scroll="about">About</a></li>
-              <li><a class="nav-link scrollto" href="#contact_us" data-scroll="contact_us">Contact Us</a></li>
-            </ul>
-            <i class="bi mobile-nav-toggle bi-list"></i>
+          <nav id="navbar" class="navbar navbar-expand-md navbar-light col-6">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li><a class="nav-link scrollto" href="#home" data-scroll="home">Home</a></li>
+                    <li><a class="nav-link scrollto" href="#shop" data-scroll="shop">Our Shop</a></li>
+                    <li><a class="nav-link scrollto" href="#about" data-scroll="about">About</a></li>
+                    <li><a class="nav-link scrollto" href="#contact_us" data-scroll="contact_us">Contact Us</a></li>
+                </ul>
+            </div>
           </nav>
           <div class="search col-3">
             <form action="{{ route('search') }}" method="GET">
@@ -49,6 +52,40 @@
             </form>
           </div>
         </div>
+        <div class="container container_header container_header_small_display align-items-center justify-content-around">
+
+            <div class="d-flex logo">
+                  <a href="/"></a>
+                  <div class="f-flex logo_title">
+                          <h1>Shell Licensee</h1>
+                          <h2>Royal Oil </p>
+                  </div>
+            </div>
+            <nav id="navbar" class="navbar navbar-expand-md navbar-light col-6">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                      <li class="nav-item"><a class="nav-link scrollto" href="#home" data-scroll="home">Home</a></li>
+                      <li class="nav-item"><a class="nav-link scrollto" href="#shop" data-scroll="shop">Our Shop</a></li>
+                      <li class="nav-item"><a class="nav-link scrollto" href="#about" data-scroll="about">About</a></li>
+                      <li class="nav-item"><a class="nav-link scrollto" href="#contact_us" data-scroll="contact_us">Contact Us</a></li>
+                  </ul>
+
+                 <div class="search col-3">
+                    <form action="{{ route('search') }}" method="GET">
+                        @method('GET')
+                        <div class="container_search">
+                            <input type="text" maxlength= "12" name="search"  placeholder="Search" class="searchbar">
+                            <input type="image" src={{ asset('img/search.png') }} alt="Submit feedback" class="button">
+                            {{-- <img src="{{ asset('img/search.png') }}" alt="Magnifying Glass" > --}}
+                        </div>
+                    </form>
+                 </div>
+              </div>
+            </nav>
+          </div>
       </header>
     @yield('content')
 

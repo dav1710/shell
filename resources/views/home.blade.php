@@ -108,19 +108,26 @@
 <script>
     $('.product-carousel').owlCarousel({
         loop:true,
-        margin:10,
+        margin:5,
         nav:true,
         dots:false,
         rewind: true,
         autoplay:true,
         autoplayTimeout:3000,
         autoplayHoverPause:true,
+        responsiveClass:true,
         navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
         responsive:{
             0:{
                 items:1
             },
-            600:{
+            555:{
+                items:2,
+            },
+            810:{
+                items:3,
+            },
+            881:{
                 items:3
             },
             1172:{
