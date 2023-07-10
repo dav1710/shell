@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\MapController;
 use App\Http\Controllers\LangController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
@@ -23,7 +24,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/optimize', function() {
+    Artisan::call("config:cache");
+    Artisan::call("view:clear");
+    return 'Optimized cache';
+});
+Route::get('/config-clear', function() {
+    Artisan::call("config:cache");
+    return 'Optimized config';
+});
 Route::get('/', function () {
     return view('home');
 });
