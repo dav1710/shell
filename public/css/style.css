@@ -181,6 +181,7 @@ body {
   */
   .navbar {
     padding: 0;
+    margin-right: 18%;
   }
 
   .navbar ul {
@@ -195,7 +196,7 @@ body {
     position: relative;
     display: flex;
     text-align: center;
-    margin-right: 15%;
+    margin-right: 24%;
     align-items: center;
     height: 100px;
   }
@@ -223,7 +224,7 @@ body {
   }
   .searchbar {
     font-size: 16px;
-    width: 18rem;
+    width: 250px;
     height: 66px;
     border: none;
     outline: none;
@@ -237,13 +238,15 @@ body {
   }
 
 
-
+  .container_header_big_display{
+    margin: 0 auto;
+  }
   .button {
     position: absolute;
     top: 0.7rem;
     border-radius: 50%;
     box-shadow: 0 0 4px rgba(119, 119, 119, 0.25);
-    right: 9rem;
+    right: 15px;
     transition: all .2s;
     transition-delay: .1s;
     background-color: #FBFBFB;
@@ -256,7 +259,7 @@ body {
 
 
   .container_search {
-    width: 25rem;
+    padding-left: 13%;
     height: 100%;
     margin: 0 1rem;
     position: relative;
@@ -1048,13 +1051,19 @@ body {
 }
 @media screen and (max-width: 503px) {
     #header .logo a{
-        margin-top: 32px !important;
+        margin-top: 32px !important
+
+        ;
     }
     .logo_title h1{
-        font-size: 15px !important;
+        font-size: 15px !important
+
+        ;
     }
     .logo_title h2{
-        font-size: 12px !important;
+        font-size: 12px !important
+
+        ;
     }
     .owl-nav{
         width: 80%;
