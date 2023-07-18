@@ -224,7 +224,7 @@ body {
   }
   .searchbar {
     font-size: 16px;
-    width: 250px;
+    width: 18rem;
     height: 66px;
     border: none;
     outline: none;
@@ -236,7 +236,9 @@ body {
     transition: all .2s;
     transition-delay: .1s;
   }
-
+  .search{
+    width: 22%;
+  }
 
   .container_header_big_display{
     margin: 0 auto;
@@ -246,7 +248,7 @@ body {
     top: 0.7rem;
     border-radius: 50%;
     box-shadow: 0 0 4px rgba(119, 119, 119, 0.25);
-    right: 15px;
+    right: 0px;
     transition: all .2s;
     transition-delay: .1s;
     background-color: #FBFBFB;
@@ -498,6 +500,9 @@ body {
 .product_image{
     height: 100%;
 }
+.product_image_all{
+    height: 100%;
+}
 .card{
     box-shadow: 1.4605504274368286px 1.4605504274368286px 7.3027520179748535px 0px rgba(0, 0, 0, 0.25), -1.4605504274368286px -1.4605504274368286px 7.3027520179748535px 0px rgba(0, 0, 0, 0.25);
     border: none;
@@ -669,13 +674,16 @@ body {
     margin: 0 auto;
 }
 .all_products{
+    display: flex;
+    justify-content: space-between;
     margin-top: 120px !important;
     margin-inline: auto !important;
 }
 .all_products .card{
-    width: 22% !important;
-    margin-bottom: 30px;
+    width: 290px !important;
+    margin-bottom: 30px !important;
 }
+
 @media screen and (max-width: 1640px) {
     .logo_title h1 {
         font-size: 19.79px !important;
@@ -712,7 +720,7 @@ body {
     .owl-nav{
         width: 98%;
     }
-    .card img{
+    .card img:not(.product_image_all){
         width: 210px !important;
     }
     .container_search{
@@ -741,7 +749,7 @@ body {
     .owl-nav{
         width: 97%;
     }
-    .card img{
+    .card img:not(.product_image_all){
         width: 190px !important;
     }
     .card-body{
@@ -767,7 +775,7 @@ body {
     .owl-nav{
         width: 97%;
     }
-    .card img{
+    .card img:not(.product_image_all){
         width: 230px !important;
     }
     .card-body{
@@ -830,7 +838,7 @@ body {
     .owl-nav{
         width: 97%;
     }
-    .card img{
+    .card img:not(.product_image_all){
         width: 190px !important;
     }
     .card-body{
@@ -1039,6 +1047,9 @@ body {
     #map{
         margin: 0 auto !important;
     }
+    .all_products{
+        max-width: fit-content !important;
+    }
 }
 
 @media screen and (max-width: 555px) {
@@ -1051,19 +1062,13 @@ body {
 }
 @media screen and (max-width: 503px) {
     #header .logo a{
-        margin-top: 32px !important
-
-        ;
+        margin-top: 32px !important;
     }
     .logo_title h1{
-        font-size: 15px !important
-
-        ;
+        font-size: 15px !important;
     }
     .logo_title h2{
-        font-size: 12px !important
-
-        ;
+        font-size: 12px !important;
     }
     .owl-nav{
         width: 80%;
