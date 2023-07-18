@@ -19,16 +19,16 @@
 
 <body>
     <header id="header" class="fixed-top d-flex align-items-center header-scrolled">
-        <div class="container container_header container_header_big_display align-items-center justify-content-around">
+        <div class="container container_header container_header_big_display align-items-center justify-content-between">
 
-          <div class="d-flex logo col-3">
+          <div class="d-flex logo">
                 <a href="/"></a>
                 <div class="f-flex logo_title">
                         <h1>Shell Licensee</h1>
                         <h2>Royal Oil </p>
                 </div>
           </div>
-          <nav id="navbar" class="navbar navbar-expand-md navbar-light col-6">
+          <nav id="navbar" class="navbar navbar-expand-md navbar-light">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -41,7 +41,7 @@
                 </ul>
             </div>
           </nav>
-          <div class="search col-3">
+          <div class="search">
             <form action="{{ route('search') }}" method="GET">
                 @method('GET')
                 <div class="container_search">
@@ -93,7 +93,7 @@
     <div class="footer_container">
         <div class="footer_grid">
             <div class="footer_grid_item">
-                <div id="map" style="width: 300px; height: 300px; margin: 0px 30px"></div>
+                <div id="map" style="width: 300px; height: 300px; margin: 0px 30px; box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.25), -1px -1px 4px 0px rgba(0, 0, 0, 0.25); border-radius: 10px;"></div>
             </div>
             <div class="footer_grid_item">
                 <div class="d-flex flex-column">
