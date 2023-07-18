@@ -416,9 +416,10 @@ body {
     justify-content: center;
   }
   .card img {
-    margin: 20px;
+    margin: 26px 29px 0px 29px;
     box-shadow: 1.4605504274368286px 1.4605504274368286px 2.9211008548736572px 0px rgba(0, 0, 0, 0.25), -1.4605504274368286px -1.4605504274368286px 2.9211008548736572px 0px rgba(0, 0, 0, 0.25);
-    width: 230px !important;
+    width: 227px !important;
+    height: 241px !important;
   }
   .our_shop_slider .carousel-inner {
     padding: 1em;
